@@ -40,23 +40,6 @@ describe('UserEffects', () => {
      */
   });
 
-  describe('addUser', () => {
-    it('should return an AddUserSuccess action with the user', () => {
-      const user = generateUser();
-      /**
-       * à compléter
-       */
-    });
-
-    it('should return an AddUserFail action, with an error, on failure', () => {
-      const user = generateUser();
-      const error = new Error();
-      /**
-       * à compléter
-       */
-    });
-  });
-
   describe('loadUser', () => {
     it('should return a LoadUserFail action, with an error, on failure', () => {
       const user = generateUser();
