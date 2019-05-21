@@ -1,12 +1,12 @@
-import { provideMockActions } from '@ngrx/effects/testing';
-import { TestBed } from '@angular/core/testing';
-import { UserService } from '@core/services/user.service';
 import { Observable } from 'rxjs';
+import { TestBed } from '@angular/core/testing';
 import {
   UpdateUserSuccess
 } from './user.actions';
 import { UserEffects } from './user.effects';
+import { UserService } from '@core/services/user.service';
 import { generateUser } from './user.model';
+import { provideMockActions } from '@ngrx/effects/testing';
 
 describe('UserEffects', () => {
   let actions: Observable<any>;
