@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@core/*": ["apps/myapp/src/app/core/*"],
+      "@state/*": ["apps/myapp/src/app/state/*"],
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
