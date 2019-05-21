@@ -1,14 +1,22 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { metaReducers, reducers } from './reducers';
 
 import { AppComponent } from './app.component';
-import { StateModule } from '@state/state.module';
+import { BrowserModule } from '@angular/platform-browser';
+import { EffectsModule } from '@ngrx/effects';
+import { NgModule } from '@angular/core';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { StoreModule } from '@ngrx/store';
+import { UserListEffects } from './user-list/effects';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    StateModule
+    StoreModule.forRoot(reducers, { metaReducers }),
+    EffectsModule.forRoot([UserListEffects]),
+    StoreDevtoolsModule.instrument({
+      name: 'NgRx App'
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
